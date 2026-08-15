@@ -42,15 +42,13 @@ cli-tool
 ```
 
 ## Project File Structure
-
+```
+Project File Structure
 ├── external-api.js    # API integration and search query handler
-|
 ├── index.js           # Main CLI entry point, animation routines, and game loop
-|
 ├── package.json       # ES Module config, bin links, and dependencies
-|
 └── README.md          # Project documentation
-
+```
 ## 🧠 Notes & Edge Case Handling
 
 * **ES Module Architecture:** Configured with "type": "module" and #!/usr/bin/env node shebang line for cross-platform binary execution.
