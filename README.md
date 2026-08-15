@@ -1,8 +1,11 @@
+
+
+
 # 🎮 Interactive CLI Quiz & Location Search Tool
 
 > An interactive command-line interface (CLI) application built with Node.js featuring dynamic autocomplete search via Teleport REST API, real-time terminal animations, and a computer science quiz game.
 
-https://github.com/user-attachments/assets/c7b4ed30-d50c-4206-8bb2-317e412abb41
+https://github.com/user-attachments/assets/fe672f6d-2c8e-48e4-a50a-6bc130e4437f
 
 ---
 
