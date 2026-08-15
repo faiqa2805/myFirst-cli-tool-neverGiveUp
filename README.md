@@ -1,1 +1,51 @@
+# 🎮 Interactive CLI Quiz & Location Search Tool
+
+> An interactive command-line interface (CLI) application built with Node.js featuring dynamic autocomplete search via Teleport REST API, real-time terminal animations, and a computer science quiz game.
+
 <img width="800" height="482" alt="ScreenRecording2026-08-15112853-ezgif com-video-to-gif-converter" src="https://github.com/user-attachments/assets/2b4c5d29-111d-48b3-a6a1-4717d6d4145d" />
+---
+
+## 📌 Features
+
+* **Asynchronous Execution Flow:** Top-level `async/await` execution pipeline for step-by-step game progression and score tracking.
+* **Terminal UI Animations:** Visual spinner statuses, rainbow ASCII headers, custom gradient rendering, and graceful exit handling on failure states.
+
+---
+### Core Dependencies
+
+* **`inquirer` / `inquirer-autocomplete-standalone`:** Terminal prompt rendering
+* **`nanospinner`:** Non-blocking async loader states for answer validation(checking answer).
+* **`gradient-string` & `figlet`:** ASCII banner rendering on completion("Congratulations ${playername}").
+* **`chalk` & `chalk-animation`:** Terminal color styling and text animations.
+
+---
+
+## 🚀 Setup
+
+Clone the repository:
+```bash
+git clone [https://github.com/your-username/cli-tool.git](https://github.com/your-username/cli-tool.git)
+cd cli-tool
+```
+Install dependencies:
+```bash
+npm install
+```
+Link CLI locally for testing:
+```bash
+npm link
+cli-tool
+```
+
+## Project File Structure
+.
+├── external-api.js    # API integration and search query handler
+├── index.js           # Main CLI entry point, animation routines, and game loop
+├── package.json       # ES Module config, bin links, and dependencies
+└── README.md          # Project documentation
+
+## 🧠 Notes & Edge Case Handling
+
+* **ES Module Architecture:** Configured with "type": "module" and #!/usr/bin/env node shebang line for cross-platform binary execution.
+* **API Fault Tolerance:** The searchCountries function in external-api.js explicitly guards against empty inputs, handles URI encoding via encodeURIComponent(), and returns a safe fallback array [] on fetch failure.
+* **Terminal Process Lifecycle:** Immediate process termination (process.exit(1)) upon incorrect answers
